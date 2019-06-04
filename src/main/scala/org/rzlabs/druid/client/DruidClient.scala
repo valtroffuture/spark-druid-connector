@@ -400,6 +400,7 @@ class DruidQueryServerClient(host: String, port: Int, useSmile: Boolean = false)
       .put("dataSource", dataSource)
     val resp: String = post(url, payload)
     val objectNode = jsonMapper.readTree(resp)
+    println(objectNode)
     val maxTime: java.util.List[String] = objectNode.findValuesAsText("maxTime")
     val minTime: java.util.List[String] = objectNode.findValuesAsText("minTime")
     if (!maxTime.isEmpty && !minTime.isEmpty) {

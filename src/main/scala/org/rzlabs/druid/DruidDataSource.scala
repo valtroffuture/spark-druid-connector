@@ -12,7 +12,7 @@ import org.rzlabs.druid.client.{Aggregator, ColumnDetail, MetadataResponse, Time
 object DruidDataType extends Enumeration {
   val String = Value("STRING")
   val Long = Value("LONG")
-  val Float = Value("FLOAT")
+  val Float = Value("DOUBLE")
   val HyperUnique = Value("hyperUnique")
   val ThetaSketch = Value("thetaSketch")
 
